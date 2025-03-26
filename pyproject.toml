@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cardano-gasless-tx"
+version = "1.0.2"
+authors = [
+  { name="Nucast", email="contact@nucast.io" },
+]
+description = "Gasless Tx Library for Cardano"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+dependencies = [
+    "requests>=2.31.0",
+    "pycardano>=0.13.0",
+    "fastapi>=0.111.1",
+    "bip-utils>=2.9.3",
+    "cbor2>=5.6.5",
+    "blockfrost-python>=0.6.0",
+    "uvicorn>=0.30.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/Nucastio/gasless-python-lib"
+Issues = "https://github.com/Nucastio/gasless-python-lib/issues"
+

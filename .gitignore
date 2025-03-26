@@ -1,0 +1,8 @@
+build/
+dist/
+rng_lib.egg-info/
+py_rng_lib.egg-info/
+__pycache__/
+venv/
+
+.pypirc
