@@ -74,7 +74,7 @@ class Gasless:
         self.in_app_wallet = Wallet(key=wallet["key"], network=Network.TESTNET if wallet["network"] == 0 else Network.MAINNET)
 
         self.blockchain_provider = BlockFrostChainContext(
-            project_id=api_key, network=wallet["network"], base_url=ApiUrls.preprod.value)
+            project_id=api_key, network=wallet["network"], base_url=ApiUrls.preprod.value if wallet["network"] == 0 else ApiUrls.mainnet.value)
 
         # self.instance = RequestsInstance(api_base_url)
         self.app = FastAPI()
